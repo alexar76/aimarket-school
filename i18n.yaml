@@ -1,0 +1,453 @@
+# AIMarket School — UI + lesson copy. EN is fallback; lessons.yaml holds structure + EN defaults.
+
+langs: [en, ru, es, fr, zh]
+
+ui:
+  en:
+    brand_school: School
+    nav_lessons: Lessons
+    nav_academy: Academy
+    nav_guides: Guides
+    nav_mesh: Mesh
+    cta_start: Start lesson 01
+    cta_academy: Academy · 10 courses
+    lesson_meta: "Lesson {order} · ~{minutes} min · free"
+    watch: 1. Watch the clip
+    try_live: 2. Try it live
+    go_deeper: 3. Open Colab · go deeper
+    short_note: Short · autoplay · no soundtrack needed
+    colab: Open in Colab
+    academy_btn: "Academy: {label} ↗"
+    colab_note: Colab runs the same calls free. Academy = full labs + certificate.
+    all_lessons: All lessons
+    output_placeholder: Output lands here.
+    footer: AICOM · School is the on-ramp. Academy is the depth.
+    portal_title: AIMarket School — clip lessons for the agent economy
+    section_catalog: Ten clips. Ten academies.
+  ru:
+    brand_school: Школа
+    nav_lessons: Уроки
+    nav_academy: Академия
+    nav_guides: Гайды
+    nav_mesh: Mesh
+    cta_start: Урок 01
+    cta_academy: Академия · 10 курсов
+    lesson_meta: "Урок {order} · ~{minutes} мин · бесплатно"
+    watch: 1. Смотри клип
+    try_live: 2. Запусти live
+    go_deeper: 3. Colab · глубже
+    short_note: Коротко · автоплей · без саундтрека
+    colab: Открыть в Colab
+    academy_btn: "Академия: {label} ↗"
+    colab_note: Colab — те же вызовы бесплатно. Академия = лабы + сертификат.
+    all_lessons: Все уроки
+    output_placeholder: Здесь будет вывод.
+    footer: AICOM · Школа — вход. Академия — глубина.
+    portal_title: AIMarket School — клипы про экономику агентов
+    section_catalog: Десять клипов. Десять академий.
+  es:
+    brand_school: Escuela
+    nav_lessons: Lecciones
+    nav_academy: Academia
+    nav_guides: Guías
+    nav_mesh: Mesh
+    cta_start: Lección 01
+    cta_academy: Academia · 10 cursos
+    lesson_meta: "Lección {order} · ~{minutes} min · gratis"
+    watch: 1. Mira el clip
+    try_live: 2. Pruébalo en vivo
+    go_deeper: 3. Colab · más profundo
+    short_note: Corto · autoplay · sin banda sonora
+    colab: Abrir en Colab
+    academy_btn: "Academia: {label} ↗"
+    colab_note: Colab hace las mismas llamadas gratis. Academia = labs + certificado.
+    all_lessons: Todas las lecciones
+    output_placeholder: La salida aparece aquí.
+    footer: AICOM · La Escuela es la rampa. La Academia es la profundidad.
+    portal_title: AIMarket School — clips de la economía de agentes
+    section_catalog: Diez clips. Diez academias.
+  fr:
+    brand_school: École
+    nav_lessons: Leçons
+    nav_academy: Académie
+    nav_guides: Guides
+    nav_mesh: Mesh
+    cta_start: Leçon 01
+    cta_academy: Académie · 10 cours
+    lesson_meta: "Leçon {order} · ~{minutes} min · gratuit"
+    watch: 1. Regarde le clip
+    try_live: 2. Essaie en live
+    go_deeper: 3. Colab · aller plus loin
+    short_note: Court · autoplay · sans bande-son
+    colab: Ouvrir dans Colab
+    academy_btn: "Académie : {label} ↗"
+    colab_note: Colab fait les mêmes appels gratis. Académie = labs + certificat.
+    all_lessons: Toutes les leçons
+    output_placeholder: La sortie s'affiche ici.
+    footer: AICOM · L'École est l'entrée. L'Académie est la profondeur.
+    portal_title: AIMarket School — clips sur l'économie des agents
+    section_catalog: Dix clips. Dix académies.
+  zh:
+    brand_school: 学校
+    nav_lessons: 课程
+    nav_academy: 学院
+    nav_guides: 指南
+    nav_mesh: Mesh
+    cta_start: 第 01 课
+    cta_academy: 学院 · 10 门课
+    lesson_meta: "第 {order} 课 · 约 {minutes} 分钟 · 免费"
+    watch: 1. 看短片
+    try_live: 2. 现场试跑
+    go_deeper: 3. Colab · 深入
+    short_note: 短片 · 自动播放 · 无需配乐
+    colab: 在 Colab 打开
+    academy_btn: "学院：{label} ↗"
+    colab_note: Colab 免费跑同样的调用。学院 = 实验 + 证书。
+    all_lessons: 全部课程
+    output_placeholder: 输出显示在这里。
+    footer: AICOM · 学校是入口。学院是深度。
+    portal_title: AIMarket School — 智能体经济短课
+    section_catalog: 十个短片。十门学院课。
+
+portal:
+  en:
+    eyebrow: 10 lessons · free · Colab · 5 min
+    h1: Learn the agent economy in clips.
+    lede: One result per lesson. Hit Run. Then go deep in the Academy.
+  ru:
+    eyebrow: 10 уроков · бесплатно · Colab · 5 мин
+    h1: Экономика агентов — в клипах.
+    lede: Один результат за урок. Жми Run. Потом — Академия.
+  es:
+    eyebrow: 10 lecciones · gratis · Colab · 5 min
+    h1: La economía de agentes en clips.
+    lede: Un resultado por lección. Pulsa Run. Luego la Academia.
+  fr:
+    eyebrow: 10 leçons · gratuit · Colab · 5 min
+    h1: L'économie des agents en clips.
+    lede: Un résultat par leçon. Lance Run. Puis l'Académie.
+  zh:
+    eyebrow: 10 课 · 免费 · Colab · 5 分钟
+    h1: 用短片学懂智能体经济。
+    lede: 每课一个结果。点 Run。再进学院深挖。
+
+lessons:
+  agents-in-5-min:
+    en:
+      title: "3 Agents. Zero Dashboard."
+      punch: Spin a tiny agent hop in the browser — discover → invoke → done.
+      academy_label: AI Agent Orchestration
+      demo_label: Search live capabilities
+      short_beats: ["Agents find agents", "No human in the loop", "One hop. Receipt included."]
+    ru:
+      title: "3 агента. Ноль дашбордов."
+      punch: Крошечный hop (хоп) в браузере — discover → invoke → готово.
+      academy_label: Оркестрация AI-агентов
+      demo_label: Найти живые возможности
+      short_beats: ["Агенты находят агентов", "Без человека в цикле", "Один hop (хоп). Квитанция в комплекте."]
+    es:
+      title: "3 agentes. Cero dashboard."
+      punch: Un salto (hop) mínimo en el navegador — discover → invoke → listo.
+      academy_label: Orquestación de agentes IA
+      demo_label: Buscar capacidades en vivo
+      short_beats: ["Agentes encuentran agentes", "Sin humano en el loop", "Un salto (hop). Recibo incluido."]
+    fr:
+      title: "3 agents. Zéro dashboard."
+      punch: Un micro-saut (hop) dans le navigateur — discover → invoke → terminé.
+      academy_label: Orchestration d'agents IA
+      demo_label: Chercher des capacités live
+      short_beats: ["Les agents trouvent des agents", "Pas d'humain dans la boucle", "Un saut (hop). Reçu inclus."]
+    zh:
+      title: "三个智能体。零仪表盘。"
+      punch: 浏览器里一次小跳 (hop) — 发现 → 调用 → 完成。
+      academy_label: AI 智能体编排
+      demo_label: 搜索在线能力
+      short_beats: ["智能体发现智能体", "循环中无人介入", "一跳 (hop)。收据附上。"]
+
+  unfakeable-random:
+    en:
+      title: "Random You Can't Rig"
+      punch: Pull signed chaos-VRF from Platon. Verify the signature, not the vibe.
+      academy_label: Verifiable Randomness
+      demo_label: Roll Platon VRF
+      short_beats: ["Bias breaks lotteries", "VRF = math + signature", "Anyone can check offline"]
+    ru:
+      title: "Рандом, который не подкрутить"
+      punch: Подписанный chaos-VRF от Platon. Проверяй подпись, не вайб.
+      academy_label: Верифицируемая случайность
+      demo_label: Бросить Platon VRF
+      short_beats: ["Смещение ломает лотереи", "VRF = математика + подпись", "Офлайн-проверка"]
+    es:
+      title: "Azar que no puedes trucar"
+      punch: Chaos-VRF firmado de Platon. Verifica la firma, no el vibe.
+      academy_label: Aleatoriedad verificable
+      demo_label: Tirar Platon VRF
+      short_beats: ["El sesgo rompe loterías", "VRF = mates + firma", "Cualquiera verifica sin conexión"]
+    fr:
+      title: "Du hasard qu'on ne truque pas"
+      punch: Chaos-VRF signé de Platon. Vérifie la signature, pas le vibe.
+      academy_label: Aléa vérifiable
+      demo_label: Lancer Platon VRF
+      short_beats: ["Le biais casse les loteries", "VRF = maths + signature", "Vérifiable hors ligne"]
+    zh:
+      title: "无法作弊的随机"
+      punch: 从 Platon 拉取签名 chaos-VRF。验签，不看感觉。
+      academy_label: 可验证随机性
+      demo_label: 掷 Platon VRF
+      short_beats: ["偏见毁掉彩票", "VRF = 数学 + 签名", "人人可离线校验"]
+
+  poison-check:
+    en:
+      title: "Catch Tool Poisoning"
+      punch: One static scan. Spot the hostile MCP tool before it runs.
+      academy_label: MCP Security & Agent Safety
+      demo_label: Open WARDEN threat model
+      short_beats: ["MCP tools can lie", "Scan before you trust", "WARDEN is the gate"]
+    ru:
+      title: "Поймай отравление инструмента"
+      punch: Один статический скан. Враждебный MCP-инструмент — до запуска.
+      academy_label: Безопасность MCP и защита агентов
+      demo_label: Модель угроз WARDEN
+      short_beats: ["MCP-инструменты умеют врать", "Скан до доверия", "WARDEN — врата"]
+    es:
+      title: "Atrapa el tool poisoning"
+      punch: Un escaneo estático. Detecta el MCP hostil antes de ejecutarlo.
+      academy_label: Seguridad de MCP y protección de agentes
+      demo_label: Modelo de amenaza WARDEN
+      short_beats: ["Las tools MCP pueden mentir", "Escanea antes de confiar", "WARDEN es la puerta"]
+    fr:
+      title: "Attrape le tool poisoning"
+      punch: Un scan statique. Repère l'outil MCP hostile avant l'exécution.
+      academy_label: Sécurité MCP et protection des agents
+      demo_label: Modèle de menace WARDEN
+      short_beats: ["Les tools MCP peuvent mentir", "Scanner avant de faire confiance", "WARDEN est la porte"]
+    zh:
+      title: "抓住工具投毒"
+      punch: 一次静态扫描。在运行前识别敌意 MCP 工具。
+      academy_label: MCP 安全与智能体防护
+      demo_label: 打开 WARDEN 威胁模型
+      short_beats: ["MCP 工具会说谎", "先扫描再信任", "WARDEN 是关卡"]
+
+  ai-pays-ai:
+    en:
+      title: "AI Pays AI — $0.01"
+      punch: See a real HTTP 402. Channels turn agents into customers.
+      academy_label: Agent Economy from Scratch
+      demo_label: Trigger a 402 on Platon
+      short_beats: ["402 = payment required", "Escrow holds the float", "Settle on proof"]
+    ru:
+      title: "AI платит AI — $0.01"
+      punch: Живой HTTP 402. Платёжные каналы делают агентов клиентами.
+      academy_label: Экономика агентов с нуля
+      demo_label: Вызвать 402 на Platon
+      short_beats: ["402 = нужна оплата", "Эскроу держит float", "Расчёт по доказательству"]
+    es:
+      title: "IA paga a IA — $0.01"
+      punch: Un HTTP 402 real. Los canales de pago convierten agentes en clientes.
+      academy_label: Economía de agentes
+      demo_label: Disparar un 402 en Platon
+      short_beats: ["402 = pago requerido", "El depósito en garantía (escrow) guarda el float", "Liquidación con prueba"]
+    fr:
+      title: "L'IA paie l'IA — $0.01"
+      punch: Un vrai HTTP 402. Les canaux de paiement font des agents des clients.
+      academy_label: Économie des agents
+      demo_label: Déclencher un 402 sur Platon
+      short_beats: ["402 = paiement requis", "Le séquestre (escrow) tient le float", "Règlement sur preuve"]
+    zh:
+      title: "AI 付给 AI — $0.01"
+      punch: 真实 HTTP 402。支付通道让智能体成为客户。
+      academy_label: 智能体经济入门
+      demo_label: 在 Platon 触发 402
+      short_beats: ["402 = 需要付款", "托管锁定资金", "凭证明结算"]
+
+  trust-without-magic:
+    en:
+      title: "Trust Without Magic"
+      punch: PageRank-flavored trust on a live peer graph — numbers, not vibes.
+      academy_label: Mathematics of Trust
+      demo_label: Peek live hub stats
+      short_beats: ["Trust is a graph", "Scores are measurable", "Federated, not faith"]
+    ru:
+      title: "Доверие без магии"
+      punch: Trust в стиле PageRank на живом графе — цифры, не вайб.
+      academy_label: Математика доверия
+      demo_label: Живая статистика хаба
+      short_beats: ["Доверие — граф", "Оценки доверия измеримы", "Федерация, не вера"]
+    es:
+      title: "Confianza sin magia"
+      punch: Trust tipo PageRank en un grafo peer vivo — números, no vibes.
+      academy_label: Matemáticas de la confianza
+      demo_label: Stats del hub en vivo
+      short_beats: ["La confianza es un grafo", "Las puntuaciones de confianza se miden", "Federado, no fe"]
+    fr:
+      title: "La confiance sans magie"
+      punch: Trust façon PageRank sur un graphe peer live — des chiffres, pas des vibes.
+      academy_label: Mathématiques de la confiance
+      demo_label: Stats live du hub
+      short_beats: ["La confiance est un graphe", "Les scores de confiance se mesurent", "Fédéré, pas la foi"]
+    zh:
+      title: "没有魔法的信任"
+      punch: 在线同伴图上的 PageRank 式信任 — 看数字，不看感觉。
+      academy_label: 信任数学
+      demo_label: 查看在线枢纽 (Hub) 统计
+      short_beats: ["信任是一张图", "分数可度量", "联邦，不是信仰"]
+
+  proof-not-vibes:
+    en:
+      title: "Optimization With Receipts"
+      punch: Ask an optimizer that returns a proof — not a shrug.
+      academy_label: Optimization with Proofs
+      demo_label: Find proof-bearing caps
+      short_beats: ["Answers need receipts", "TSP / transport / GP", "Verify offline"]
+    ru:
+      title: "Оптимизация с квитанциями"
+      punch: Оптимизатор, который возвращает proof — не пожатие плеч.
+      academy_label: Оптимизация с доказательствами
+      demo_label: Найти caps с proof
+      short_beats: ["Ответам нужны квитанции", "TSP / транспорт / GP", "Офлайн-проверка"]
+    es:
+      title: "Optimización con recibos"
+      punch: Un optimizador que devuelve proof — no un encogimiento de hombros.
+      academy_label: Optimización con pruebas
+      demo_label: Buscar caps con proof
+      short_beats: ["Las respuestas necesitan recibos", "TSP / transporte / GP", "Verificación sin conexión"]
+    fr:
+      title: "Optimisation avec reçus"
+      punch: Un optimiseur qui renvoie une preuve — pas un haussement d'épaules.
+      academy_label: Optimisation avec preuves
+      demo_label: Trouver des caps à preuve
+      short_beats: ["Les réponses ont besoin de reçus", "TSP / transport / GP", "Vérifier hors ligne"]
+    zh:
+      title: "带收据的优化"
+      punch: 要会返回证明的优化器 — 不是耸肩。
+      academy_label: 带证明的优化
+      demo_label: 查找带证明的能力
+      short_beats: ["答案需要收据", "TSP / 运输 / GP", "离线校验"]
+
+  agent-lottery:
+    en:
+      title: "Agent Lottery on Base"
+      punch: Unbiasable draws need VRF + contracts — not a house deck.
+      academy_label: Smart Contracts for Lotteries
+      demo_label: Open live escrow on Basescan
+      short_beats: ["House decks cheat", "VRF seeds the draw", "Settle on Base"]
+    ru:
+      title: "Лотерея агентов на Base"
+      punch: Честный розыгрыш = VRF + контракты — не колода казино.
+      academy_label: Смарт-контракты для лотерей агентов
+      demo_label: Эскроу на Basescan
+      short_beats: ["Казино мухлюет", "VRF сеет розыгрыш", "Расчёт на Base"]
+    es:
+      title: "Lotería de agentes en Base"
+      punch: Sorteos sin sesgo = VRF + contratos — no un mazo de la casa.
+      academy_label: Contratos inteligentes para loterías de agentes
+      demo_label: Abrir depósito en garantía en Basescan
+      short_beats: ["La casa hace trampa", "VRF siembra el sorteo", "Liquidar en Base"]
+    fr:
+      title: "Loterie d'agents sur Base"
+      punch: Tirages sans biais = VRF + contrats — pas un jeu de la maison.
+      academy_label: Contrats intelligents pour loteries d'agents
+      demo_label: Ouvrir le séquestre sur Basescan
+      short_beats: ["La maison triche", "VRF ensemence le tirage", "Règlement sur Base"]
+    zh:
+      title: "Base 上的智能体彩票"
+      punch: 无偏抽签需要 VRF + 合约 — 不是庄家牌堆。
+      academy_label: 彩票智能合约
+      demo_label: 在 Basescan 打开托管
+      short_beats: ["庄家会作弊", "VRF 播种抽签", "在 Base 结算"]
+
+  factory-one-shot:
+    en:
+      title: "Idea → Product. One Pipeline."
+      punch: Factory stages turn a prompt into a demo product on the human storefront.
+      academy_label: AI-Factory Pipeline
+      demo_label: Hit factory public surface
+      short_beats: ["Research → build → ship", "Agents hire agents", "Land on the human storefront"]
+    ru:
+      title: "Идея → продукт. Один пайплайн."
+      punch: Стадии фабрики превращают промпт в демо-продукт на витрине для людей.
+      academy_label: Конвейер AI-Factory
+      demo_label: Публичная поверхность фабрики
+      short_beats: ["Research → build → ship", "Агенты нанимают агентов", "На витрину для людей"]
+    es:
+      title: "Idea → producto. Un pipeline."
+      punch: Las etapas de la fábrica convierten un prompt en un producto demo en la vitrina humana.
+      academy_label: Pipeline AI-Factory
+      demo_label: Superficie pública de la fábrica
+      short_beats: ["Research → build → ship", "Agentes contratan agentes", "A la vitrina humana"]
+    fr:
+      title: "Idée → produit. Un pipeline."
+      punch: Les étapes de l'usine transforment un prompt en produit démo sur la vitrine humaine.
+      academy_label: Pipeline AI-Factory
+      demo_label: Surface publique de l'usine
+      short_beats: ["Research → build → ship", "Les agents embauchent des agents", "Sur la vitrine humaine"]
+    zh:
+      title: "想法 → 产品。一条流水线。"
+      punch: 工厂阶段把提示词变成面向人的橱窗演示产品。
+      academy_label: AI-Factory 流水线
+      demo_label: 访问工厂公开面
+      short_beats: ["研究 → 构建 → 发布", "智能体雇佣智能体", "落到面向人的橱窗"]
+
+  mesh-in-3d:
+    en:
+      title: "See the Mesh in 3D"
+      punch: Open the live service mesh — topology, hops, spend.
+      academy_label: 3D Data Visualization
+      demo_label: Open live mesh dashboard
+      short_beats: ["Topology is destiny", "Hops light up live", "Spend is visible"]
+    ru:
+      title: "Mesh в 3D"
+      punch: Живой service mesh — топология, hops (хопы), spend.
+      academy_label: 3D-визуализация данных
+      demo_label: Открыть live mesh
+      short_beats: ["Топология решает", "Hops (хопы) загораются live", "Spend виден"]
+    es:
+      title: "La malla (mesh) en 3D"
+      punch: Service mesh en vivo — topología, saltos (hops), gasto.
+      academy_label: Visualización 3D de datos
+      demo_label: Abrir dashboard del mesh
+      short_beats: ["La topología es destino", "Los saltos (hops) se encienden en vivo", "El gasto se ve"]
+    fr:
+      title: "Le maillage (mesh) en 3D"
+      punch: Service mesh live — topologie, sauts (hops), dépenses.
+      academy_label: Visualisation 3D des données
+      demo_label: Ouvrir le dashboard mesh
+      short_beats: ["La topologie est le destin", "Les sauts (hops) s'allument en live", "Les dépenses sont visibles"]
+    zh:
+      title: "三维看 Mesh"
+      punch: 打开在线服务网格 (mesh) — 拓扑、跳 (hop)、花费。
+      academy_label: 三维数据可视化
+      demo_label: 打开在线 mesh 仪表盘
+      short_beats: ["拓扑即命运", "跳 (hop) 实时点亮", "花费可见"]
+
+  physics-beats-blackbox:
+    en:
+      title: "Physics Beats the Black Box"
+      punch: Swarm, cascade, Landauer — physics-shaped oracles you can audit.
+      academy_label: Physics-Inspired Computing
+      demo_label: Find physics oracles
+      short_beats: ["Nature has receipts", "Swarm / cascade / entropy", "Audit the math"]
+    ru:
+      title: "Физика бьёт чёрный ящик"
+      punch: Swarm, cascade, Landauer — оракулы с формой физики, которые аудируешь.
+      academy_label: Вычисления, вдохновлённые физикой
+      demo_label: Найти physics-оракулы
+      short_beats: ["У природы есть квитанции", "Swarm / cascade / entropy", "Аудит математики"]
+    es:
+      title: "La física vence a la caja negra"
+      punch: Swarm, cascade, Landauer — oráculos con forma física que puedes auditar.
+      academy_label: Computación inspirada en física
+      demo_label: Buscar oráculos de física
+      short_beats: ["La naturaleza tiene recibos", "Swarm / cascade / entropy", "Audita las mates"]
+    fr:
+      title: "La physique bat la boîte noire"
+      punch: Swarm, cascade, Landauer — oracles façonnés par la physique, auditables.
+      academy_label: Calcul inspiré de la physique
+      demo_label: Trouver des oracles physiques
+      short_beats: ["La nature a des reçus", "Swarm / cascade / entropy", "Auditer les maths"]
+    zh:
+      title: "物理打败黑箱"
+      punch: 群涌、级联、Landauer — 可审计的物理形态预言机。
+      academy_label: 物理启发计算
+      demo_label: 查找物理预言机
+      short_beats: ["自然有收据", "群涌 / 级联 / 熵", "审计数学"]

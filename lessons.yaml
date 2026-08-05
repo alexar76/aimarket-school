@@ -1,0 +1,233 @@
+# AIMarket School — 10 clip-length lessons. One wow → one Academy course.
+# Keep titles short and hype. Every lesson must run free (browser + Colab).
+
+portal:
+  brand: AIMarket School
+  eyebrow: 10 lessons · free · Colab · 5 min
+  h1: Learn the agent economy in clips.
+  lede: One result per lesson. Hit Run. Then go deep in the Academy.
+  academy_url: https://alexar76.github.io/aimarket-courses/
+  learn_url: /learn/
+
+lessons:
+  - id: agents-in-5-min
+    order: 1
+    title: "3 Agents. Zero Dashboard."
+    punch: Spin a tiny agent hop in the browser — discover → invoke → done.
+    minutes: 5
+    academy: orchestration-course
+    academy_label: AI Agent Orchestration
+    demo: hub_search
+    demo_label: Search live capabilities
+    short_beats:
+      - "Agents find agents"
+      - "No human in the loop"
+      - "One hop. Receipt included."
+    colab_cells:
+      - "# AIMarket School — 3 Agents. Zero Dashboard."
+      - "import urllib.request, json"
+      - "HUB='https://modelmarket.dev'"
+      - "q='oracle'"
+      - "url=f'{HUB}/ai-market/v2/search?intent={q}&limit=5'"
+      - "data=json.load(urllib.request.urlopen(url))"
+      - "for m in data.get('matches',[]):"
+      - "  print(m['capability_id'], '$'+str(m.get('price_per_call_usd')))"
+
+  - id: unfakeable-random
+    order: 2
+    title: "Random You Can't Rig"
+    punch: Pull signed chaos-VRF from Platon. Verify the signature, not the vibe.
+    minutes: 4
+    academy: verifiable-randomness-course
+    academy_label: Verifiable Randomness
+    demo: platon_random
+    demo_label: Roll Platon VRF
+    short_beats:
+      - "Bias breaks lotteries"
+      - "VRF = math + signature"
+      - "Anyone can check offline"
+    colab_cells:
+      - "# AIMarket School — Random You Can't Rig"
+      - "import urllib.request, json"
+      - "url='https://oracles.modelmarket.dev/family/ai-market/v2/invoke'"
+      - "body=json.dumps({'capability_id':'platon.random@v1','input':{}}).encode()"
+      - "req=urllib.request.Request(url,data=body,headers={'content-type':'application/json'})"
+      - "out=json.load(urllib.request.urlopen(req))"
+      - "print(out['output']['random_hex'])"
+      - "print('scheme:', out['output']['proof']['scheme'])"
+
+  - id: poison-check
+    order: 3
+    title: "Catch Tool Poisoning"
+    punch: One static scan. Spot the hostile MCP tool before it runs.
+    minutes: 5
+    academy: mcp-security-course
+    academy_label: MCP Security & Agent Safety
+    demo: warden_static
+    demo_label: Open WARDEN threat model
+    short_beats:
+      - "MCP tools can lie"
+      - "Scan before you trust"
+      - "WARDEN is the gate"
+    colab_cells:
+      - "# AIMarket School — Catch Tool Poisoning"
+      - "print('SAFE   get_weather(city) → forecast JSON')"
+      - "print('POISON get_weather(city) → also reads ~/.ssh')"
+      - "print('Rule: pin tools. Scan before invoke.')"
+      - "print('Academy next: MCP Security & Agent Safety')"
+
+  - id: ai-pays-ai
+    order: 4
+    title: "AI Pays AI — $0.01"
+    punch: See a real HTTP 402. Channels turn agents into customers.
+    minutes: 5
+    academy: agent-economy-course
+    academy_label: Agent Economy from Scratch
+    demo: payment_402
+    demo_label: Trigger a 402 on Platon
+    short_beats:
+      - "402 = payment required"
+      - "Escrow holds the float"
+      - "Settle on proof"
+    colab_cells:
+      - "# AIMarket School — AI Pays AI"
+      - "import urllib.request, json"
+      - "url='https://modelmarket.dev/ai-market/v2/invoke'"
+      - "body=json.dumps({'product_id':'prod-platon','capability_id':'platon.random@v1','source_hub':'https://oracles.modelmarket.dev/family','input':{}}).encode()"
+      - "req=urllib.request.Request(url,data=body,headers={'content-type':'application/json'})"
+      - "try:"
+      - "  urllib.request.urlopen(req)"
+      - "except urllib.error.HTTPError as e:"
+      - "  print('status', e.code)"
+      - "  print(e.read().decode()[:400])"
+
+  - id: trust-without-magic
+    order: 5
+    title: "Trust Without Magic"
+    punch: PageRank-flavored trust on a live peer graph — numbers, not vibes.
+    minutes: 5
+    academy: mathematics-of-trust-course
+    academy_label: Mathematics of Trust
+    demo: hub_stats
+    demo_label: Peek live hub stats
+    short_beats:
+      - "Trust is a graph"
+      - "Scores are measurable"
+      - "Federated, not faith"
+    colab_cells:
+      - "# AIMarket School — Trust Without Magic"
+      - "import urllib.request, json"
+      - "doc=json.load(urllib.request.urlopen('https://modelmarket.dev/.well-known/ai-market.json'))"
+      - "print('hub', doc.get('name'), 'v'+str(doc.get('hub_version')))"
+      - "print('federated caps', doc.get('federated_capabilities_count'))"
+      - "print('payment_configured', doc.get('payment_configured'))"
+
+  - id: proof-not-vibes
+    order: 6
+    title: "Optimization With Receipts"
+    punch: Ask an optimizer that returns a proof — not a shrug.
+    minutes: 5
+    academy: optimization-with-proofs-course
+    academy_label: Optimization with Proofs
+    demo: search_proof
+    demo_label: Find proof-bearing caps
+    short_beats:
+      - "Answers need receipts"
+      - "TSP / transport / GP"
+      - "Verify offline"
+    colab_cells:
+      - "# AIMarket School — Optimization With Receipts"
+      - "import urllib.request, json"
+      - "url='https://modelmarket.dev/ai-market/v2/search?intent=optimize&limit=8'"
+      - "data=json.load(urllib.request.urlopen(url))"
+      - "for m in data.get('matches',[]):"
+      - "  print(m.get('capability_id'), m.get('description','')[:80])"
+
+  - id: agent-lottery
+    order: 7
+    title: "Agent Lottery on Base"
+    punch: Unbiasable draws need VRF + contracts — not a house deck.
+    minutes: 5
+    academy: smart-contracts-course
+    academy_label: Smart Contracts for Lotteries
+    demo: basescan_escrow
+    demo_label: Open live escrow on Basescan
+    short_beats:
+      - "House decks cheat"
+      - "VRF seeds the draw"
+      - "Settle on Base"
+    colab_cells:
+      - "# AIMarket School — Agent Lottery on Base"
+      - "print('Escrow (Base): https://basescan.org/address/0x0606983cbEc6D0C12a0B750f72Ceb6032c72C25D')"
+      - "print('External depositor proof (§3j):')"
+      - "print(' open  https://basescan.org/tx/0xea4038c9f6dedb26ece1c0454a4b181cd17c71686c6e73b5f092e70a2c83549e')"
+      - "print(' debit https://basescan.org/tx/0xf740cd0cd2ada97dd243ad067c2dc0f16504d40030c54b4aef37137f2a824355')"
+      - "print(' settle https://basescan.org/tx/0xcce0dcdddfd962cd2d16840246cfc2761b8325d4a58f186009bcdd5b3c942472')"
+
+  - id: factory-one-shot
+    order: 8
+    title: "Idea → Product. One Pipeline."
+    punch: Factory stages turn a prompt into a demo product on the human storefront.
+    minutes: 5
+    academy: ai-factory-course
+    academy_label: AI Factory Pipeline
+    demo: factory_health
+    demo_label: Hit factory public surface
+    short_beats:
+      - "Research → build → ship"
+      - "Agents hire agents"
+      - "Land on the human storefront"
+    colab_cells:
+      - "# AIMarket School — Idea → Product"
+      - "import urllib.request, json"
+      - "url='https://modelmarket.dev/ai-market/v2/manifest'"
+      - "man=json.load(urllib.request.urlopen(url))"
+      - "print('tools indexed', man.get('total_capabilities') or len(man.get('tools') or []))"
+      - "print('local', man.get('local_capabilities'), 'federated', man.get('federated_capabilities'))"
+
+  - id: mesh-in-3d
+    order: 9
+    title: "See the Mesh in 3D"
+    punch: Open the live service mesh — topology, hops, spend.
+    minutes: 3
+    academy: 3d-data-viz-course
+    academy_label: 3D Data Visualization
+    demo: mesh_live
+    demo_label: Open live mesh dashboard
+    short_beats:
+      - "Topology is destiny"
+      - "Hops light up live"
+      - "Spend is visible"
+    colab_cells:
+      - "# AIMarket School — See the Mesh in 3D"
+      - "print('Live mesh: https://service-mesh.modelmarket.dev/')"
+      - "print('Landing:   https://alexar76.github.io/ai-service-mesh/')"
+      - "import urllib.request, json"
+      - "try:"
+      - "  s=json.load(urllib.request.urlopen('https://service-mesh.modelmarket.dev/v1/stats'))"
+      - "  print('stats keys', list(s)[:8] if isinstance(s,dict) else type(s))"
+      - "except Exception as e:"
+      - "  print('mesh stats:', e)"
+
+  - id: physics-beats-blackbox
+    order: 10
+    title: "Physics Beats the Black Box"
+    punch: Swarm, cascade, Landauer — physics-shaped oracles you can audit.
+    minutes: 5
+    academy: physics-inspired-computing-course
+    academy_label: Physics-Inspired Computing
+    demo: search_physics
+    demo_label: Find physics oracles
+    short_beats:
+      - "Nature has receipts"
+      - "Swarm / cascade / entropy"
+      - "Audit the math"
+    colab_cells:
+      - "# AIMarket School — Physics Beats the Black Box"
+      - "import urllib.request, json"
+      - "for q in ('murmuration','ablation','landauer','colony'):"
+      - "  url=f'https://modelmarket.dev/ai-market/v2/search?intent={q}&limit=3'"
+      - "  data=json.load(urllib.request.urlopen(url))"
+      - "  print('—', q)"
+      - "  for m in data.get('matches',[]):"
+      - "    print(' ', m.get('capability_id'))"
