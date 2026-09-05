@@ -1,0 +1,45 @@
+# AIMarket School CI — build contract (no network, no live hub).
+#
+# Checks the things that used to rot silently: lesson/i18n completeness in all
+# five languages, notebooks matching a fresh build, the portal↔mirror canonical
+# split, og:image assets, robots/sitemap ownership, and that every demo endpoint
+# still matches the nginx bridge.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pyyaml
+      - name: Build the portal (site root) and the nested mirror
+        run: |
+          SEO_BASE_URL=https://edu.modelmarket.dev SCHOOL_MOUNT= \
+            SCHOOL_OUT="${RUNNER_TEMP}/portal" python build.py
+          SCHOOL_OUT="${RUNNER_TEMP}/mirror" python build.py
+      - name: Tests
+        run: pytest tests -q --tb=short
+      - name: Notebooks unchanged by the build
+        run: git diff --exit-code -- notebooks
