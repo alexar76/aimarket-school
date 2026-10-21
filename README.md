@@ -9,7 +9,7 @@
 
 <!-- aicom-readme-badges -->
 <p align="center">
-  <a href="https://github.com/alexar76/aimarket-school/actions/workflows/ci.yml"><img src="https://raw.githubusercontent.com/alexar76/aimarket-school/refs/heads/main/docs/badges/ci.svg" alt="CI" /></a>
+  <a href="https://github.com/alexar76/aimarket-school/actions/workflows/ci.yml"><img src="https://github.com/alexar76/aimarket-school/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://raw.githubusercontent.com/alexar76/aimarket-school/refs/heads/main/docs/badges/tests.svg" alt="21 build-contract tests" />
   <img src="https://raw.githubusercontent.com/alexar76/aimarket-school/refs/heads/main/docs/badges/lessons.svg" alt="13 lessons" />
   <img src="https://raw.githubusercontent.com/alexar76/aimarket-school/refs/heads/main/docs/badges/languages.svg" alt="EN RU ES FR ZH" />
@@ -105,7 +105,7 @@ SEO_BASE_URL=https://edu.modelmarket.dev SCHOOL_MOUNT= SCHOOL_OUT=edu-landing \
   LEARN_BASE=https://modeldev.modelmarket.dev python3 school/build.py
 
 # Deploy edu.modelmarket.dev
-./scripts/deploy_edu_school.sh --remote my-vps
+./scripts/deploy_edu_school.sh --remote factory-vps
 ```
 
 Both builds emit the same pages; only the portal is indexable. Every page
@@ -161,7 +161,7 @@ browser → open Colab" message instead of `TypeError: Failed to fetch`.
 ./scripts/push_gitea_monorepo.sh
 
 # Live edu portal (+ /hub bridge — required for Try-it demos)
-./scripts/deploy_edu_school.sh --remote my-vps
+./scripts/deploy_edu_school.sh --remote factory-vps
 ```
 
 Colab URLs always point at `alexar76/aimarket-school` (`school/` is excluded from the factory `aicom` mirror — do not use an `aicom` Colab path).
